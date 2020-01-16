@@ -17,7 +17,7 @@ export class AppComponent {
   timerArray: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   sum;
   avg;
-  edit: any = {};
+  edit: any = { double: false};
   isReady = false;
 
   ngOnInit() {
