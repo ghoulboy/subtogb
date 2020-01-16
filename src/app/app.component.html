@@ -17,13 +17,11 @@
 <input class="form-check-input" type="text" name="mode" placeholder="single edit bind" [disabled]="key" [(ngModel)]="key" (keypress)="setKey1($event)">
 <input *ngIf="edit.double" class="form-check-input" type="text" placeholder="double edit bind" name="mode" [disabled]="key2" [(ngModel)]="key2" (keypress)="setKey2($event)">
 
-<button (click)="reset()">Reset Key</button> {{subscribeTimer}}
+<button (click)="reset()">Reset Key</button>
 <div>
   <button (click)="ready()">Ready</button>
 </div>
-<div>
-  <button (click)="resetTest()">Reset</button>
-</div>
+
 <div>
   {{avg}}
 </div>
