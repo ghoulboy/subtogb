@@ -9,6 +9,8 @@ import { timer, BehaviorSubject } from 'rxjs';
 export class AppComponent {
   key;
   key2;
+  counter: number;
+  timerRef;
   isRunning = false;
   time;
   source;
@@ -35,29 +37,35 @@ export class AppComponent {
   handleKeyboardEvent(event: KeyboardEvent) { 
     if (this.isReady) {
       if(!this.key2 && this.key == event.key) {
-        if (!this.isRunning) {
-          this.isRunning = true;
-          this.source = timer(0,0);
-          this.sourceSub = this.source.subscribe(x => this.time = x);
-        } else {
-          this.isRunning = false;
-          this.addData(this.time)
-          this.sourceSub.unsubscribe();
-        }
-      } else if (this.key2) {
-        if(this.key == event.key && !this.isRunning) {
-          this.isRunning = true;
-          this.source = timer(0,0);
-          this.sourceSub = this.source.subscribe(x => this.time = x);
-        } else if (this.key2 == event.key && this.isRunning) {
-          this.isRunning = false;
-          this.addData(this.time)
-          this.sourceSub.unsubscribe();
-        }
+          if (!this.isRunning) {
+              this.isRunning = true;
+              const startTime = Date.now() - (this.counter || 0);
+              this.timerRef = setInterval(() => {
+              this.counter = Date.now() - startTime;
+            });
+          } else {
+            this.isRunning = false;
+            this.addData(this.counter)
+            this.counter = undefined;
+            clearInterval(this.timerRef);
+          }
+        } else if (this.key2) {
+          if(this.key == event.key && !this.isRunning) {
+            this.isRunning = true;
+            const startTime = Date.now() - (this.counter || 0);
+            this.timerRef = setInterval(() => {
+              this.counter = Date.now() - startTime;
+            });
+          } else if (this.key2 == event.key && this.isRunning) {
+            this.isRunning = false;
+            this.addData(this.counter)
+            this.counter = undefined;
+            clearInterval(this.timerRef);
+          }
       }
-
     }
   }
+
 
   ready() {
     this.isReady = true
