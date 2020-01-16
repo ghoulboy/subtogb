@@ -66,7 +66,6 @@ export class AppComponent {
     }
   }
 
-
   ready() {
     this.isReady = true
   }
