@@ -17,15 +17,12 @@
   <div (mouseup)="handleKeyboardEvent($event)"> 
     <div class="section no-pad-bot" id="index-banner">
       <div class="container">
-        <br><br>
+        <br>
         <h1 class="header center orange-text">Think You Edit Fast?</h1>
         <div class="row center">
           <p style="font-size: 11px;">psstt! sub to ghoulboy on youtube</p>
           <div class="g-ytsubscribe" data-channelid="UCKw4ePK_d779b3xumQ-2bHA" data-layout="full" data-count="default"></div>
           <h5 class="header col s12 light">Are you Mongraal? Raider464? Psycho? Let's find out.</h5>
-          
-          <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/3rvnpmeVhAM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-
         </div>
         <div class="row">
           <div class="col m12 l6">
@@ -137,32 +134,32 @@
             </div>
           </div>
         </div>
-    </div>
-    <div *ngIf="edit == 3">
-      <div class="row">
-        <div class="col s8 offset-s2">        
-          <div class="card small" style="height: 350px;">
-            <div class="card-content">
-              <span class="card-title">Edit On Release Box</span>
-              <div id="eorWindow" (contextmenu)="skipRightClick($event)" class="card small blue lighten-5" style="height: 275px;">
+      </div>
+      <div *ngIf="edit == 3">
+        <div class="row">
+          <div class="col s8 offset-s2">        
+            <div class="card small" style="height: 350px;">
+              <div class="card-content">
+                <span class="card-title">Edit On Release Box</span>
+                <div id="eorWindow" (contextmenu)="skipRightClick($event)" class="card small blue lighten-5" style="height: 275px;">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col s8 offset-s2">
-        <div class="card large">
-          <div class="card-content">
-            <span class="card-title">Times</span>
-            <div id="chartContainer" style="height: 370px;"></div>
-          </div>
-        </div>   
+      <div class="row">
+        <div class="col s8 offset-s2">
+          <div class="card large">
+            <div class="card-content">
+              <span class="card-title">Times</span>
+              <div id="chartContainer" style="height: 370px;"></div>
+            </div>
+          </div>   
+        </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 <footer class="page-footer light-blue lighten-1">
   <div class="container">
