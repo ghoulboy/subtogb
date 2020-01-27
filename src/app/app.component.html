@@ -1,15 +1,15 @@
 <nav class="light-blue lighten-1" role="navigation">
   <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">GHOULBOY</a>
     <ul class="right hide-on-med-and-down">
-      <li><a href="http://bit.ly/2KAN80z">Youtube</a></li>
-      <li><a href="https://twitter.com/notghoulboy">Twitter</a></li>
-      <li><a href="https://twitch.com/ghoulboy">Twitch</a></li>    
+      <li><a href="http://bit.ly/2KAN80z"><i style="font-size: 25px" class="icon-youtube-play"></i></a></li>
+      <li><a href="https://twitter.com/notghoulboy"><i style="font-size: 25px" class="icon-twitter"></i></a></li>
+      <li><a href="https://twitch.com/ghoulboy"><i style="font-size: 28px" class="fa fa-twitch"></i></a></li>    
     </ul>
 
     <ul id="nav-mobile" class="sidenav">
       <li><a href="http://bit.ly/2KAN80z">Youtube</a></li>
     </ul>
-    <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>     
   </div>
 </nav>
 
@@ -28,7 +28,7 @@
     </div>
     <div class="row">
       <div class="col s12 m6">
-        <div class="card large">
+        <div class="card large z-depth-2-gb">
           <div class="card-content">
             <span class="card-title">Options</span>
             <div class="row">
@@ -87,7 +87,7 @@
         </div>
       </div>
       <div class="col s12 m6">
-        <div class="card large">
+        <div class="card large z-depth-2-gb">
           <div class="card-content">
               <div class="card-title col s11">Times (in ms)</div>
               <i class="material-icons prefix col s1" [ngStyle]="isReady ? {'color':'green'} : {'color':'orange'}">{{isReady ? 'play_arrow' : 'pause'}}</i>
@@ -96,6 +96,7 @@
                 <blockquote>
                   <h5>Timer: {{counter}}</h5>
                   <h5>Average: {{avg | number:'1.1-5'}}</h5>
+                  <span style="font-size: 12px" *ngIf="prevAvg | async as pavg">Saved Avg: {{pavg | number:'1.1-5' }}</span> 
                 </blockquote>
               </div>
               <div class="col s6">
@@ -114,7 +115,8 @@
           </div>
           <div class="card-action">
             <div class="row center">
-              <button class="btn-large btn-flat waves-effect waves-light" (click)="resetData()">Reset</button>
+              <button class="btn-large waves-effect waves-light light-blue lighten-1" (click)="saveAvg()">Save Avg</button>
+              <button class="btn-large btn-flat waves-effect waves-light" (click)="resetData()">Reset</button>             
             </div>
           </div>
         </div>
@@ -125,7 +127,7 @@
 </div>
 <div class="row">
   <div class="col s8 offset-s2">
-    <div class="card large">
+    <div class="card large z-depth-2-gb">
       <div class="card-content">
         <span class="card-title">Times</span>
         <div id="chartContainer" style="height: 370px;"></div>
@@ -134,6 +136,32 @@
   </div>
 </div>
 </div>
+<div class="section no-pad-bot">
+    <div class="container">
+      <div class="row">
+        <div class="col s6">
+          <div class="card medium z-depth-2-gb">
+            <div class="card-content">
+              <span class="card-title">Editing Video Placement</span>
+              <div class="video-container">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/eCilywrgmNg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s6">
+            <div class="card medium z-depth-2-gb">
+              <div class="card-content">
+                <span class="card-title">Wana play like mongraal??</span>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3rvnpmeVhAM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
 <footer class="page-footer light-blue lighten-1">
   <div class="container">
     <div class="row">
@@ -149,9 +177,9 @@
       <div class="col l3 s12">
         <h5 class="white-text">Connect</h5>
         <ul>
-          <li><a class="white-text" href="http://bit.ly/2KAN80z">Youtube</a></li>
-          <li><a class="white-text" href="https://twitter.com/notghoulboy">Twitter</a></li>
-          <li><a class="white-text" href="https://twitch.com/ghoulboy">Twitch</a></li>         
+          <li><a href="http://bit.ly/2KAN80z"><i style="font-size: 25px" class="icon-youtube-play"></i> - Youtube</a></li>
+          <li><a href="https://twitter.com/notghoulboy"><i style="font-size: 25px" class="icon-twitter"></i> - Twitter</a></li>
+          <li><a href="https://twitch.com/ghoulboy"><i style="font-size: 28px" class="fa fa-twitch"></i> - Twitch</a></li>        
         </ul>
       </div>
     </div>
