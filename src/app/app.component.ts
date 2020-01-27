@@ -94,7 +94,8 @@ export class AppComponent {
             this.timerRef = setInterval(() => {
               this.counter = Date.now() - startTime;
             });
-          } else if ((this.key2 == event.key || (this.key2 == 'mouse button 4' && event.button == 3 || this.key2 == 'mouse button 5' && event.button == 4)) && this.isRunning) {
+            //0 at end reps mouse up button
+          } else if ((this.key2 == event.key || (this.key2 == 'mouse button 4' && event.button == 3 || this.key2 == 'mouse button 5' && event.button == 4) || (this.key2 == 'mouse 1' && event.button == 0 || this.key2 == 'mouse 2' && event.button == 2) && this.isRunning)) {
             this.isRunning = false;
             const toMs = this.counter / 1000
             if (toMs < .2) {
@@ -105,6 +106,10 @@ export class AppComponent {
           }
       }
     }
+  }
+
+  skipRightClick(e) {
+    e.preventDefault();
   }
 
   ready() {
@@ -126,9 +131,9 @@ export class AppComponent {
   }
 
   clearKey2() {
-    this.key2 = null;
+    this.edit.double = null;
   }
-
+  
   addData(dataObj) {
     const currentValue = this.timerArray.value;
     const updatedValue = [...currentValue, dataObj];
