@@ -20,6 +20,7 @@ export class AppComponent {
   sourceSub;
   timerSub;
   timerArray: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  prevAvg: BehaviorSubject<any> = new BehaviorSubject('');
   sum;
   avg;
   edit: any = { double: false};
@@ -34,6 +35,7 @@ export class AppComponent {
       history.pushState(null, null, document.URL);
     });
 
+    this.prevAvg.next(JSON.parse(localStorage.getItem('avg')))
 
     this.timerSub = this.timerArray.subscribe(x => {
 
@@ -148,6 +150,12 @@ export class AppComponent {
     this.chart.render();
     this.max = 0;
     this.min = 0;
+  }
+
+  saveAvg() {
+    // Put the object into storage
+    localStorage.setItem('avg', JSON.stringify(this.avg));
+    this.prevAvg.next(this.avg);
   }
 
   onClick(e) {
