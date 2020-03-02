@@ -95,7 +95,7 @@ export class AppComponent {
               this.counter = Date.now() - startTime;
             });
             //0 at end reps mouse up button
-          } else if ((this.key2 == event.key || (this.key2 == 'mouse button 4' && event.button == 3 || this.key2 == 'mouse button 5' && event.button == 4) || (this.key2 == 'mouse 1' && event.button == 0 || this.key2 == 'mouse 2' && event.button == 2) && this.isRunning)) {
+          } else if (((this.key2 == event.key || (this.key2 == 'mouse button 4' && event.button == 3 || this.key2 == 'mouse button 5' && event.button == 4) || (this.key2 == 'mouse 1' && event.button == 0 || this.key2 == 'mouse 2' && event.button == 2)) && this.isRunning)) {
             this.isRunning = false;
             const toMs = this.counter / 1000
             if (toMs < .2) {

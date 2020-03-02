@@ -17,18 +17,52 @@
   <div (mouseup)="handleKeyboardEvent($event)"> 
     <div class="section no-pad-bot" id="index-banner">
       <div class="container">
-        <br>
+        <br><br>
         <h1 class="header center orange-text">Think You Edit Fast?</h1>
         <div class="row center">
           <p style="font-size: 11px;">psstt! sub to ghoulboy on youtube</p>
           <div class="g-ytsubscribe" data-channelid="UCKw4ePK_d779b3xumQ-2bHA" data-layout="full" data-count="default"></div>
           <h5 class="header col s12 light">Are you Mongraal? Raider464? Psycho? Let's find out.</h5>
+          
+          <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/3rvnpmeVhAM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+<<<<<<< HEAD
+    </div>
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card large z-depth-2-gb">
+          <div class="card-content">
+            <span class="card-title">Options</span>
+            <div class="row">
+                <li>Choose Single or Double Edits</li>
+                <li>Enter your fortnite edit bind</li>
+                <li>When set click 'Ready'</li>
+                <li>Set your hand like normal and test your edit click speed!</li>
+            </div>
+            <div action="#">
+              <p>
+                <label for="single">
+                  <input id="single" name="group1" type="radio"  [value]="false" (click)="clearKey2()" [(ngModel)]="edit.double" class="with-gap" checked />
+                  <span class="black-text">Single</span>
+                </label>
+              </p>
+              <p>
+                <label for="double">
+                  <input id="double" name="group1" type="radio" [value]="true" class="with-gap" [(ngModel)]="edit.double"/>
+                  <span class="black-text">Double</span>
+                </label>
+              </p>
+            </div>
+            <div class="row">
+              <div class="col s12">
+=======
         </div>
         <div class="row">
           <div class="col m12 l6">
-        <div class="card large z-depth-2-gb">
+            <div class="card large">
               <div class="card-content">
                 <span class="card-title">Options</span>
+>>>>>>> 178fde2d528a1416021fcf4ee6c27560b52203a6
                 <div class="row">
                     <li>Choose Single or Double Edits</li>
                     <li>Enter your fortnite edit bind</li>
@@ -92,25 +126,55 @@
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
+            </div>
+          </div>
+          <div class="card-action">
+            <div class="row center">
+              <button class="btn-large waves-effect waves-light" [ngClass]="isReady ? 'light-green' : 'light-blue lighten-1'" (click)="ready()">Ready</button>
+              <button class="btn-large btn-flat waves-effect waves-light" (click)="clearKeys()">Clear</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="card large z-depth-2-gb">
+          <div class="card-content">
+              <div class="card-title col s11">Times (in ms)</div>
+              <i class="material-icons prefix col s1" [ngStyle]="isReady ? {'color':'green'} : {'color':'orange'}">{{isReady ? 'play_arrow' : 'pause'}}</i>
+            <div class="row">
+              <div class="col s6">
+                <blockquote>
+                  <h5>Timer: {{counter}}</h5>
+                  <h5>Average: {{avg | number:'1.1-5'}}</h5>
+                  <span style="font-size: 12px" *ngIf="prevAvg | async as pavg">Saved Avg: {{pavg | number:'1.1-5' }}</span> 
+                </blockquote>
+              </div>
+              <div class="col s6">
+                <blockquote>
+                  <h5>Fastest: {{min}}</h5>
+                  <h5>Slowest: {{max}}</h5>
+                </blockquote>
+=======
               <div class="card-action">
                 <div class="row center">
                   <button class="btn-large waves-effect waves-light" [ngClass]="isReady ? 'light-green' : 'light-blue lighten-1'" (click)="ready()">Ready</button>
                   <button class="btn-large btn-flat waves-effect waves-light" (click)="clearKeys()">Clear</button>
                 </div>
+>>>>>>> 178fde2d528a1416021fcf4ee6c27560b52203a6
               </div>
             </div>
           </div>
           <div class="col m12 l6">
-            <div class="card large z-depth-2-gb">
+            <div class="card large">
               <div class="card-content">
-                  <div class="card-title col s11">Times (in seconds)</div>
+                  <div class="card-title col s11">Times (in ms)</div>
                   <i class="material-icons prefix col s1" [ngStyle]="isReady ? {'color':'green'} : {'color':'orange'}">{{isReady ? 'play_arrow' : 'pause'}}</i>
                 <div class="row">
                   <div class="col s6">
                     <blockquote>
                       <h5>Timer: {{counter}}</h5>
                       <h5>Average: {{avg | number:'1.1-5'}}</h5>
-                  <span style="font-size: 12px" *ngIf="prevAvg | async as pavg">Saved Avg: {{pavg | number:'1.1-5' }}</span> 
                     </blockquote>
                   </div>
                   <div class="col s6">
@@ -129,66 +193,84 @@
               </div>
               <div class="card-action">
                 <div class="row center">
-                  <button class="btn-large waves-effect waves-light light-blue lighten-1" (click)="saveAvg()">Save Avg</button>
                   <button class="btn-large btn-flat waves-effect waves-light" (click)="resetData()">Reset</button>
                 </div>
               </div>
             </div>
           </div>
+<<<<<<< HEAD
+          <div class="card-action">
+            <div class="row center">
+              <button class="btn-large waves-effect waves-light light-blue lighten-1" (click)="saveAvg()">Save Avg</button>
+              <button class="btn-large btn-flat waves-effect waves-light" (click)="resetData()">Reset</button>             
+=======
         </div>
-      </div>
-      <div *ngIf="edit == 3">
-        <div class="row">
-          <div class="col s8 offset-s2">        
-            <div class="card small" style="height: 350px;">
-              <div class="card-content">
-                <span class="card-title">Edit On Release Box</span>
-                <div id="eorWindow" (contextmenu)="skipRightClick($event)" class="card small blue lighten-5" style="height: 275px;">
-                </div>
+    </div>
+    <div *ngIf="edit == 3">
+      <div class="row">
+        <div class="col s8 offset-s2">        
+          <div class="card small" style="height: 350px;">
+            <div class="card-content">
+              <span class="card-title">Edit On Release Box</span>
+              <div id="eorWindow" (contextmenu)="skipRightClick($event)" class="card small blue lighten-5" style="height: 275px;">
               </div>
+>>>>>>> 178fde2d528a1416021fcf4ee6c27560b52203a6
             </div>
           </div>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+    <br><br>
+  </div>
+</div>
+<div class="row">
+  <div class="col s8 offset-s2">
+    <div class="card large z-depth-2-gb">
+      <div class="card-content">
+        <span class="card-title">Times</span>
+        <div id="chartContainer" style="height: 370px;"></div>
+=======
     <div class="row">
       <div class="col s8 offset-s2">
-        <div class="card large z-depth-2-gb">
+        <div class="card large">
           <div class="card-content">
             <span class="card-title">Times</span>
             <div id="chartContainer" style="height: 370px;"></div>
           </div>
         </div>   
+>>>>>>> 178fde2d528a1416021fcf4ee6c27560b52203a6
       </div>
     </div>
   </div>
+</div>
 </div>
 <div class="section no-pad-bot">
-  <div class="container">
-    <div class="row">
-      <div class="col s6">
-        <div class="card medium z-depth-2-gb">
-          <div class="card-content">
-            <span class="card-title">Editing Video Placement</span>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/eCilywrgmNg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="container">
+      <div class="row">
+        <div class="col s6">
+          <div class="card medium z-depth-2-gb">
+            <div class="card-content">
+              <span class="card-title">Editing Video Placement</span>
+              <div class="video-container">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/eCilywrgmNg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col s6">
-        <div class="card medium z-depth-2-gb">
-          <div class="card-content">
-            <span class="card-title">Wana play like mongraal??</span>
-            <div class="video-container">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/3rvnpmeVhAM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="col s6">
+            <div class="card medium z-depth-2-gb">
+              <div class="card-content">
+                <span class="card-title">Wana play like mongraal??</span>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3rvnpmeVhAM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
-</div>
 <footer class="page-footer light-blue lighten-1">
   <div class="container">
     <div class="row">
@@ -204,16 +286,16 @@
       <div class="col l3 s12">
         <h5 class="white-text">Connect</h5>
         <ul>
-          <li><a class="white-text" href="http://bit.ly/2KAN80z"><i style="font-size: 25px" class="icon-youtube-play"></i> - Youtube</a></li>
-          <li><a class="white-text" href="https://twitter.com/notghoulboy"><i style="font-size: 25px" class="icon-twitter"></i> - Twitter</a></li>
-          <li><a class="white-text" href="https://twitch.com/ghoulboy"><i style="font-size: 28px" class="fa fa-twitch"></i> - Twitch</a></li>        
+          <li><a href="http://bit.ly/2KAN80z"><i style="font-size: 25px" class="icon-youtube-play"></i> - Youtube</a></li>
+          <li><a href="https://twitter.com/notghoulboy"><i style="font-size: 25px" class="icon-twitter"></i> - Twitter</a></li>
+          <li><a href="https://twitch.com/ghoulboy"><i style="font-size: 28px" class="fa fa-twitch"></i> - Twitch</a></li>        
         </ul>
       </div>
     </div>
   </div>
   <div class="footer-copyright">
     <div class="container">
-      Made by <a class="orange-text text-lighten-3">GHOULBITCH LOL</a>
+    Made by <a class="orange-text text-lighten-3">GHOULBITCH LOL</a>
     </div>
   </div>
 </footer>
