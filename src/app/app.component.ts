@@ -8,7 +8,7 @@ import * as CanvasJS from '../assets/canvas/canvasjs.min';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  key;
+  key1;
   key2;
   max = 0;
   min = 0;
