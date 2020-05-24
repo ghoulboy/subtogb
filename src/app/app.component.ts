@@ -1,4 +1,4 @@
-import { Component, HostListener, ViewChild } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { timer, BehaviorSubject } from 'rxjs';
 import * as CanvasJS from '../assets/canvas/canvasjs.min';
 

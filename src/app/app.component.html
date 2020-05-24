@@ -24,11 +24,19 @@
           <div class="g-ytsubscribe" data-channelid="UCKw4ePK_d779b3xumQ-2bHA" data-layout="full" data-count="default"></div>
           <h5 class="header col s12 light">Are you Mongraal? Raider464? Psycho? Let's find out.</h5>
         </div>
+        <div class="row center">
+          <div class="m12 l6">
+            <div class="ghoul-blue">Lil demo I whipped up for ya <span style="font-size: 10px;">(use full screen)</span></div>
+            <iframe width="560" height="315" src="https://youtube.com/embed/osaUjD0B1ok" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
         <div class="row">
           <div class="col m12 l6">
-        <div class="card large z-depth-2-gb">
+            <div class="card large z-depth-2-gb">
               <div class="card-content">
-                <span class="card-title">Options</span>
+                <div class="card-title">
+                  <span>Options</span>
+                </div>
                 <div class="row">
                     <li>Choose Single or Double Edits</li>
                     <li>Enter your fortnite edit bind</li>
@@ -65,7 +73,7 @@
                       </div>
                       <div *ngIf="edit == 2 || edit == 3" class="input-field col s6">
                         <i class="material-icons prefix">filter_2</i>
-                        <input [disabled]="key2" [(ngModel)]="key2" name="key2" (keypress)="setKey2($event)" id="icon_telephone" type="tel" class="validate">
+                        <input [disabled]="key2 || edit == 3" [(ngModel)]="key2" name="key2" (keypress)="setKey2($event)" id="icon_telephone" type="tel" class="validate">
                         <label for="icon_telephone">{{key2 ? '' : 'Double Edit Bind'}}</label>
                       </div>
                       <div action="#" *ngIf="edit == 2" class="col s4 offset-s7">
