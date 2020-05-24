@@ -25,3 +25,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .z-depth-2-gb {
   box-shadow: 0 4px 5px 0 rgba(41, 182, 246, 0.14), 0 1px 10px 0 rgba(41, 182, 246, 0.12), 0 2px 4px -1px rgba(41, 182, 246, 0.3);
 }
+
+blockquote {
+  border-left: 3px solid #29b6f6;
+}

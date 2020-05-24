@@ -6,3 +6,7 @@
     text-decoration: underline;
     text-decoration-color: #29b6f6;
 }
+
+.blockquote {
+    border-left: #29b6f6 !important;
+}
