@@ -9,7 +9,6 @@ import * as CanvasJS from '../assets/canvas/canvasjs.min';
 })
 export class AppComponent {
   key;
-  key1;
   key2;
   max = 0;
   min = 0;
