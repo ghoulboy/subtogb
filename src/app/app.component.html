@@ -26,8 +26,8 @@
         </div>
         <div class="row">
           <div class="ghoul-blue center">Lil demo I whipped up for ya <span style="font-size: 10px;">(use full screen)</span></div>
-          <div class="col s6 offset-s3">
-            <div class="card medium z-depth-2-gb">
+          <div class="col m6 offset-m3 s12">
+            <div class="card z-depth-2-gb">
               <div class="card-content">               
                 <div class="video-container">
                   <iframe width="560" height="315" src="https://youtube.com/embed/osaUjD0B1ok" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -37,7 +37,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col m12 l6">
+          <div class="col s12 m6">
             <div class="card large z-depth-2-gb">
               <div class="card-content">
                 <div class="card-title underline">
@@ -114,7 +114,7 @@
               </div>
             </div>
           </div>
-          <div class="col m12 l6">
+          <div class="col s12 l6">
             <div class="card large z-depth-2-gb">
               <div class="card-content">
                   <div class="card-title underline col s11">Times (in seconds)</div>
@@ -165,7 +165,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div [hidden]="(timerArray | async).length == 0" class="row">
       <div class="col s8 offset-s2">
         <div class="card large z-depth-2-gb">
           <div class="card-content">
@@ -181,21 +181,43 @@
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
-        <div class="card medium z-depth-2-gb">
+        <div class="card z-depth-2-gb">
           <div class="card-content">
-            <span class="card-title underline">Editing Video Placement</span>
+            <span class="card-title underline">Lemme tell you how to edit better</span>
             <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/eCilywrgmNg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/TZCpeF5BXOk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
         </div>
       </div>
       <div class="col l6 s12">
-        <div class="card medium z-depth-2-gb">
+        <div class="card z-depth-2-gb">
           <div class="card-content">
             <span class="card-title underline">Wana play like mongraal??</span>
             <div class="video-container">
               <iframe width="560" height="315" src="https://www.youtube.com/embed/3rvnpmeVhAM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card z-depth-2-gb">
+          <div class="card-content">
+            <span class="card-title underline">Wana join competitive fortnite?</span>
+              <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RCgWjPdvAjI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col l6 s12">
+          <div class="card z-depth-2-gb">
+            <div class="card-content">
+              <span class="card-title underline">Catch me LIVE!</span>
+              <div class="video-container">
+                <iframe src="https://player.twitch.tv/?channel=ghoulboy&parent=www.ghoulboy.com" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
         </div>

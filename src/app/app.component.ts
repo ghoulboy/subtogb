@@ -60,7 +60,7 @@ export class AppComponent {
         dataPoints: []
       }]
     });
-      
+    
     this.chart.render();
   }
 
